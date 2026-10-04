@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chaos Fortune</title>
+<style>body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:system-ui,sans-serif;background:#fdf0d5;color:#222;overflow:hidden;text-align:center}
+button{font-size:1.6rem;padding:18px 36px;border:none;border-radius:999px;background:#c1121f;color:#fff;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.25)}button:active{transform:translateY(4px)}
+#out{font-size:1.4rem;margin:24px 16px;min-height:3em;max-width:600px}#c{font-size:6rem}
+@keyframes sh{0%,100%{transform:translate(0)}25%{transform:translate(-8px,4px)}75%{transform:translate(8px,-4px)}}.shake{animation:sh .15s 4}
+.cf{position:fixed;top:-20px;width:10px;height:14px;animation:f 2.5s linear forwards}@keyframes f{to{transform:translateY(110vh) rotate(720deg)}}</style></head><body>
+<div id="c">🥠</div><button id="b">Crack the cookie</button><p id="out"></p>
+<script>const f=["You will soon be mildly inconvenienced by a spoon.","A stranger will compliment your shoes. They are lying.","Your next sandwich will be legendary.","Do not trust the third duck.","Luck is coming. It took the bus, so give it a minute.","You will accidentally wave at someone who wasn't waving at you.","Help! I'm trapped in a fortune cookie factory!","The cookie has no fortune. The cookie IS the fortune."];
+b.onclick=()=>{document.body.classList.remove('shake');void document.body.offsetWidth;document.body.classList.add('shake');c.textContent='💥';setTimeout(()=>c.textContent='🥠',400);out.textContent='📜 '+f[Math.random()*f.length|0];
+for(let i=0;i<60;i++){const e=document.createElement('div');e.className='cf';e.style.left=Math.random()*100+'vw';e.style.background='hsl('+Math.random()*360+',90%,55%)';e.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),3200)}}</script></body></html>
